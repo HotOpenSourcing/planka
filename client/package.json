@@ -3,10 +3,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "vite build",
+    "build": "node init && vite build",
     "postinstall": "patch-package",
     "lint": "eslint --ext js,jsx src --report-unused-disable-directives",
-    "start": "vite",
+    "start": "node init && vite",
     "test": "jest",
     "test:acceptance": "cucumber-js --import tests/acceptance/cucumber.conf.js --import tests/acceptance/steps/**/*.js --format @cucumber/pretty-formatter tests"
   },

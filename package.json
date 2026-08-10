@@ -1,6 +1,6 @@
 {
   "name": "planka",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "private": true,
   "scripts": {
     "client:build": "npm run build --prefix client",
@@ -24,7 +24,7 @@
     "server:start:prod": "npm run start:prod --prefix server",
     "server:swagger:generate": "npm run swagger:generate --prefix server",
     "server:test": "npm test --prefix server",
-    "start": "concurrently -n server,client \"npm run server:start\" \"npm run client:start\"",
+    "start": "node init && concurrently -n server,client \"npm run server:start\" \"npm run client:start\"",
     "test": "npm run server:test && npm run client:test"
   },
   "lint-staged": {
